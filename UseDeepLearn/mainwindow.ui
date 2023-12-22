@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1128</width>
+    <height>682</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>16777215</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+	background-color:white;
+}
+
+QWidget{
+	background-color:white;
+}
+
+QTextEdit {
+	border-width: 1px; 
+	border-radius: 5px;
+	border-color: rgb(0, 0, 0);
+	border-style: solid;
+	background-color:white;
+	font-size: 14px;
+	color: black;
+}
+
+QLineEdit {
+alignment:center;
+	border-width: 1px; 
+	border-radius: 5px;
+	border-color: rgb(0, 0, 0);
+	border-style: inset;
+	padding: 5px;
+	color: black;
+	background:white;
+	selection-background-color:black;
+	selection-color: white;
+	font:14px;
+}
+
+QLabel {
+alignment:center;
+	border-width: 0px; 
+	border-radius: 5px;
+	border-color: rgb(0, 0, 0);
+	border-style: inset;
+	padding: 5px;
+	color: rgb(0,0,0);
+	background:white;
+}
+
+QSpinBox {
+	border-width: 2px; 
+	border-radius:5px;
+	color: white;	
+	background-color: black;
+	padding: 5;
+}
+
+QDoubleSpinBox {
+	border-width: 2px; 
+	border-radius: 5px;
+	color: white;	
+	background-color: black;
+	padding: 5;
+}
+
+QProgressBar {
+	text-align: center;
+	color: rgb(0, 0, 0);
+	border-width: 2px; 
+	border-radius: 10px;
+	border-color: rgb(0, 0, 0);
+	border-style: inset;
+	background-color:white;
+	padding:5px;
+}
+
+QProgressBar::chunk {
+	background-color: gray;
+	border-radius: 10px;
+}
+
+QPushButton:hover
+{
+    color:#888888;
+    background-color:rgb(0, 0, 0); 
+    border-style:inset;
+    padding-left:8px;
+    padding-top:8px;
+}
+
+QPushButton:pressed
+{
+    color:#ffffff;
+    background-color:rgb(0, 0, 0); 
+    border-style:inset;
+    padding-left:6px;
+    padding-top:6px;
+}
+
+QPushButton
+{
+    color:black; 
+    background-color:rgb(255,255, 255);
+    border-style:outset; 
+    border-width:2px;
+    border-color:rgb(0, 0,0);
+    border-radius:10px;
+    font: 14px;
+    min-width:100px;
+    min-height:20px;
+    padding:5px;
+}
+
+QCheckBox {
+	color: rgb(0,0,0);
+	padding: 2px;
+}
+
+QCheckBox:disabled {
+	color: red;
+	padding: 2px;
+}
+
+QCheckBox::hover {
+	border-radius:4px;
+	border-style:solid;
+	padding-left: 1px;
+	padding-right: 1px;
+	padding-bottom: 1px;
+	padding-top: 1px;
+	border-width:0px;    
+	border-color: rgb(0, 0, 0);
+	background-color:#000000;
+	color: rgb(255,255,255);
+}
+
+QCheckBox::indicator:checked {
+	height: 10px;
+	width: 10px;
+	border-style:solid;
+	border-width: 1px;
+	border-color: gray;
+	background-color: gray;
+}
+QCheckBox::indicator:unchecked {
+
+	height: 10px;
+	width: 10px;
+	border-style:solid;
+	border-width: 1px;
+	border-color: gray;
+	background-color: white;
+}
+
+
+QRadioButton {
+	color: black;
+	background-color: rgb(255,255,255);
+	padding: 1px;
+}
+QRadioButton::indicator:checked {
+	height: 10px;
+	width: 10px;
+	border-style:solid;
+	border-radius:5px;
+	border-width: 1px;
+	border-color: gray;
+	background-color: gray;
+}
+QRadioButton::indicator:!checked {
+	height: 10px;
+	width: 10px;
+	border-style:solid;
+	border-radius:5px;
+	border-width: 1px;
+	border-color: gray;
+	background-color: transparent;
+}
+
+QComboBox {
+	color: black;	
+	background: white;
+	border-style:solid;
+	border-width:2px;
+	border-color:black;
+	border-radius:5px;
+	padding: 1px;
+}
+
+QComboBox:editable {
+	background: black;
+	color: white;
+}
+
+QComboBox:!editable {
+	background: black;
+	color: white;
+}
+
+QComboBox QAbstractItemView {
+	color: white;	
+	background: black;
+	selection-color: green;
+	selection-background-color: gray;
+}
+
+QTabWidget
+{
+}
+
+QTabWidget::pane {
+		border-color: rgb(0,0,0);
+		border-style: solid;
+		border-width: 0px;
+		border-radius: 6px;
+}
+
+QTabBar::tab {	
+	color:gray;
+	font: 14pt ;
+	min-width: 100px;
+	min-height: 30px;
+	padding: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-bottom-color: black; 
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	margin-right:5px;
+	margin-left:5px;
+ 
+}
+
+QTabWidget::tab-bar{
+    alignment: center;
+}
+
+QTabBar::tab:selected
+{
+    background-color: black;
+    color:rgb(255,255,255);
+    font: 14pt;
+}
+
+QGroupBox {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 1px;
+ 	padding: 10px;
+}
+
+QGroupBox::title {
+	color:gray;
+    padding: 0px 0px 0px 0px;
+	margin:0px 0px 0px 0px;
+    background-color:white;
+}
+
+QScrollArea {
+  	 border-color: gray;
+     border-style: solid;
+	 border-width:0px;
+ 	 border-radius: 0px;
+}
+
+QScrollBar:vertical {
+     border-color: gray;
+     border-style: solid;
+	 border-width:2px;
+ 	 border-radius: 0px;
+	 color:red;
+     background: white;
+ 	 margin: 25px 0px 25px 0px;
+}
+QScrollBar::handle:vertical {
+	border-color: gray;
+     border-style: solid;
+	 border-width:2px;
+ 	 border-radius: 3px;
+	margin: 1px 2px 1px 2px;
+    background: gray;
+    min-width: 20px;
+}
+
+QScrollBar::add-line:vertical {
+   border-color: gray;
+    border-style: solid;
+	border-width:1px;
+ 	border-radius: 0px;
+    background: black;
+    height: 20px;
+    subcontrol-position: bottom;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:vertical {
+   border-color: gray;
+    border-style: solid;
+	border-width:1px;
+ 	border-radius: 0px;
+    background: black;
+    height: 20px;
+    subcontrol-position: top;
+    subcontrol-origin: margin;
+}
+
+QScrollBar:up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	border: 2px solid gray;
+    width: 5px;
+    height: 5px;
+    background: white;
+}
+
+QScrollBar:horizontal {
+    border-color: gray;
+     border-style: solid;
+	 border-width:2px;
+ 	 border-radius: 0px;
+	 color:red;
+     background: white;
+    height: 20px;
+    margin: 0px 25px 0px 25px;
+}
+QScrollBar::handle:horizontal {
+   border-color: gray;
+     border-style: solid;
+	 border-width:2px;
+ 	 border-radius: 3px;
+	margin: 1px 2px 1px 2px;
+    background: gray;
+    min-width: 20px;
+}
+QScrollBar::add-line:horizontal {
+  border-color: gray;
+    border-style: solid;
+	border-width:1px;
+ 	border-radius: 0px;
+    background: black;
+    width: 20px;
+    subcontrol-position: right;
+    subcontrol-origin: margin;
+}
+
+QScrollBar::sub-line:horizontal {
+  border-color: gray;
+    border-style: solid;
+	border-width:1px;
+ 	border-radius: 0px;
+    background: black;
+    width: 20px;
+    subcontrol-position: left;
+    subcontrol-origin: margin;
+}
+
+QScrollBar:left-arrow:horizontal, QScrollBar::right-arrow:horizontal {
+   border: 2px solid gray;
+    width: 5px;
+    height: 5px;
+    background: white;
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout">
+    <item>
+     <widget class="QGroupBox" name="groupBox">
+      <property name="title">
+       <string>窗口</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="ShowImageWidget" name="show_image_widget" native="true"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_3">
+      <property name="minimumSize">
+       <size>
+        <width>200</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>200</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>加载的网络信息</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_4">
+       <item row="0" column="0">
+        <widget class="QTextEdit" name="tedit_neural_net_message"/>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QGroupBox" name="groupBox_2">
+      <property name="minimumSize">
+       <size>
+        <width>350</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>350</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="title">
+       <string>操作</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="0" column="0">
+        <widget class="QTabWidget" name="tabWidget">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="tab">
+          <attribute name="title">
+           <string>主要操作</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <item row="0" column="0">
+            <widget class="QScrollArea" name="scrollArea">
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>275</width>
+                <height>563</height>
+               </rect>
+              </property>
+              <layout class="QGridLayout" name="gridLayout_5">
+               <item row="0" column="0">
+                <widget class="QPushButton" name="pbtn_fit_image">
+                 <property name="minimumSize">
+                  <size>
+                   <width>114</width>
+                   <height>34</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>适应图片</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QPushButton" name="pbtn_load_neual_net">
+                 <property name="minimumSize">
+                  <size>
+                   <width>114</width>
+                   <height>34</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>加载神经网络</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QPushButton" name="pbtn_load_one_image">
+                 <property name="minimumSize">
+                  <size>
+                   <width>114</width>
+                   <height>34</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>加载图片</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QPushButton" name="pbtn_analyze_image">
+                 <property name="minimumSize">
+                  <size>
+                   <width>114</width>
+                   <height>34</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>200</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>分析图片</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="0">
+                <spacer name="verticalSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>392</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="tab_2">
+          <attribute name="title">
+           <string>显示信息</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="0" column="0">
+            <widget class="QScrollArea" name="scrollArea_2">
+             <property name="verticalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOn</enum>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <widget class="QWidget" name="scrollAreaWidgetContents_2">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>275</width>
+                <height>563</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout">
+               <item>
+                <widget class="QCheckBox" name="checkbox_show_result_image">
+                 <property name="minimumSize">
+                  <size>
+                   <width>150</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>150</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>显示结果图片</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>496</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ShowImageWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">showimagewidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
